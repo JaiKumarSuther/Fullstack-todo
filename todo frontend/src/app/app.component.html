@@ -1,0 +1,24 @@
+<form [formGroup]="profileForm" (ngSubmit)="addTask()">
+    <input formControlName="todo"/>
+    <button>ADD TASK</button>
+</form>
+<div class="task-list">
+    <h2>Task List</h2>
+    <ul>
+        @for (task of todoList; track $index) {
+            <li (dblclick)="editTodoTask(task.id)">
+                <strong>{{ $index + 1 }}. </strong> {{ task.task }} <br />
+                <br /> 
+                @if (toEdit && task.id === index) {
+                        <input [(ngModel)]="profileForm.value.todo"/>
+                        <button (click)="saveTodo(task, index)">Save</button>
+                } @else { 
+                    <button (click)="editTodoTask(task.id)">Edit</button>
+                    <button (click)="deleteTask(task.id)">Delete</button>
+                }
+                <hr />
+              </li>
+        }
+    </ul>
+  </div>
+  

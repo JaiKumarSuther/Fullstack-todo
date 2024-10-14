@@ -1,0 +1,49 @@
+.task-list {
+    background-color: #f9f9f9; // Light background for the task list
+    border-radius: 8px; // Rounded corners
+    padding: 20px; // Padding around the content
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+  
+    h2 {
+      color: #333; // Darker text color for the header
+      font-size: 24px; // Larger font size for the header
+      margin-bottom: 15px; // Space below the header
+    }
+  
+    ul {
+      list-style-type: none; // Remove bullet points
+      padding: 0; // Remove default padding
+  
+      li {
+        background-color: #fff; // White background for each task
+        margin-bottom: 10px; // Space between tasks
+        padding: 15px; // Padding inside each task
+        border-radius: 5px; // Rounded corners for each task
+        transition: background-color 0.3s; // Smooth transition for hover effect
+  
+        &:hover {
+          background-color: #f0f0f0; // Change background on hover
+        }
+  
+        strong {
+          color: #555; // Slightly lighter color for the task label
+        }
+  
+        button {
+          background-color: #007bff; // Primary button color
+          color: white; // Button text color
+          border: none; // Remove border
+          border-radius: 5px; // Rounded corners for buttons
+          padding: 8px 12px; // Padding for buttons
+          cursor: pointer; // Pointer cursor on hover
+          margin-right: 5px; // Space between buttons
+          transition: background-color 0.3s; // Smooth transition for hover effect
+  
+          &:hover {
+            background-color: #0056b3; // Darker button color on hover
+          }
+        }
+      }
+    }
+  }
+  
